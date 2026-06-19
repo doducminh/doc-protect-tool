@@ -1,0 +1,38 @@
+# ===== doc-protect-tool =====
+
+# Local config (chứa mật khẩu / cấu hình riêng) — dùng .env.example làm mẫu
+.env
+
+# Đầu vào / đầu ra PDF (không commit tài liệu thật)
+*.pdf
+*.tmp.pdf
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store
