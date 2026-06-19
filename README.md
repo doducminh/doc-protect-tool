@@ -1,6 +1,6 @@
 # doc-protect-tool — Xuất PDF chống sao chép / AI (dùng chung)
 
-Tool **độc lập**, dùng lại cho mọi sản phẩm (OneGate, SSO, Dashboard, ECitizen…). Nhận 1 PDF đã có text,
+Tool **độc lập**, dùng lại cho mọi sản phẩm. Nhận 1 PDF đã có text,
 trả về PDF **ảnh thuần** (không text layer) + **watermark** + **mã hoá AES-256** (cấm copy/sửa, cho in),
 **giữ link clickable** (URI annotation đè lên ảnh).
 
@@ -21,9 +21,7 @@ python make_pdf.py <in_text.pdf> <out.pdf> [title] [author]
 
 ## Yêu cầu
 `pip install -r requirements.txt`. Tự tạo text-PDF từ .docx (cần Microsoft Word) là việc của tool gọi nó
-(vd onegate-doc-tool/make_pdfs.ps1 convert docx→PDF rồi gọi tool này).
 
 ## Nguyên tắc
 - Bảo vệ **trung thực**: KHÔNG hidden-text/poisoning/metadata giả. PDF ảnh chỉ là rào cản —
   OCR/AI nhìn ảnh vẫn đọc được; chốt chặn thật là DLP/kiểm soát truy cập.
-- Quan hệ: `onegate-doc-tool` (và các *-doc-tool khác) chỉ dựng `.docx` rồi **gọi tool này** để xuất PDF.
